@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74051F862681E7CB00B67F3E /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74051F852681E7CB00B67F3E /* PreferenceView.swift */; };
+		740A53C12682093B009E4D71 /* PreferenceListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A53C02682093B009E4D71 /* PreferenceListItem.swift */; };
+		74B061AD2681BEEC006C9ED8 /* ConfListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B061AC2681BEEC006C9ED8 /* ConfListItem.swift */; };
+		74B061AF2681BF33006C9ED8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B061AE2681BF33006C9ED8 /* Enums.swift */; };
+		74B061B12681C637006C9ED8 /* CalendarAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B061B02681C637006C9ED8 /* CalendarAgent.swift */; };
 		A70B6234237AF87000A2BA73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B6233237AF87000A2BA73 /* AppDelegate.swift */; };
 		A70B6236237AF87000A2BA73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B6235237AF87000A2BA73 /* ContentView.swift */; };
 		A70B6238237AF87700A2BA73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70B6237237AF87700A2BA73 /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74051F852681E7CB00B67F3E /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		740A53C02682093B009E4D71 /* PreferenceListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceListItem.swift; sourceTree = "<group>"; };
+		74B061AC2681BEEC006C9ED8 /* ConfListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfListItem.swift; sourceTree = "<group>"; };
+		74B061AE2681BF33006C9ED8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		74B061B02681C637006C9ED8 /* CalendarAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAgent.swift; sourceTree = "<group>"; };
 		A70B6230237AF87000A2BA73 /* Ambar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B6233237AF87000A2BA73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70B6235237AF87000A2BA73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				A70B6235237AF87000A2BA73 /* ContentView.swift */,
+				740A53C02682093B009E4D71 /* PreferenceListItem.swift */,
+				74051F852681E7CB00B67F3E /* PreferenceView.swift */,
+				74B061B02681C637006C9ED8 /* CalendarAgent.swift */,
+				74B061AC2681BEEC006C9ED8 /* ConfListItem.swift */,
+				74B061AE2681BF33006C9ED8 /* Enums.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,7 +141,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Golden Chopper";
 				TargetAttributes = {
 					A70B622F237AF87000A2BA73 = {
@@ -174,7 +189,12 @@
 				A70B6252237B078200A2BA73 /* EventMonitor.swift in Sources */,
 				A70B624C237B003900A2BA73 /* StatusBarController.swift in Sources */,
 				A70B6234237AF87000A2BA73 /* AppDelegate.swift in Sources */,
+				74B061AF2681BF33006C9ED8 /* Enums.swift in Sources */,
+				740A53C12682093B009E4D71 /* PreferenceListItem.swift in Sources */,
+				74051F862681E7CB00B67F3E /* PreferenceView.swift in Sources */,
+				74B061AD2681BEEC006C9ED8 /* ConfListItem.swift in Sources */,
 				A70B6250237B022700A2BA73 /* MainViewController.swift in Sources */,
+				74B061B12681C637006C9ED8 /* CalendarAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +238,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -242,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,6 +299,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -296,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -310,10 +332,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Ambar/Ambar.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Ambar/Preview Content\"";
-				DEVELOPMENT_TEAM = 562D22S6BD;
+				DEVELOPMENT_TEAM = 9RBABFVUZL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Ambar/Info.plist;
@@ -321,8 +344,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.anaghsharma.ambar;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zr-jin.meeting-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -333,10 +356,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Ambar/Ambar.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Ambar/Preview Content\"";
-				DEVELOPMENT_TEAM = 562D22S6BD;
+				DEVELOPMENT_TEAM = 9RBABFVUZL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Ambar/Info.plist;
@@ -344,8 +368,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.anaghsharma.ambar;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zr-jin.meeting-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

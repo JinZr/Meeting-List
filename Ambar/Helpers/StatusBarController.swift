@@ -14,15 +14,15 @@ class StatusBarController {
     private var popover: NSPopover
     private var eventMonitor: EventMonitor?
     
-    init(_ popover: NSPopover)
-    {
+    init(_ popover: NSPopover) {
         self.popover = popover
         statusBar = NSStatusBar.init()
         statusItem = statusBar.statusItem(withLength: 28.0)
         
         if let statusBarButton = statusItem.button {
-            statusBarButton.image = #imageLiteral(resourceName: "StatusBarIcon")
-            statusBarButton.image?.size = NSSize(width: 18.0, height: 18.0)
+            statusBarButton.image = NSImage(systemSymbolName: "contextualmenu.and.cursorarrow",
+                                            accessibilityDescription: nil)
+            statusBarButton.image?.size = NSSize(width: 20.0, height: 20.0)
             statusBarButton.image?.isTemplate = true
             
             statusBarButton.action = #selector(togglePopover(sender:))

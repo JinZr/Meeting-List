@@ -10,28 +10,53 @@ import SwiftUI
 import AppKit
 
 struct ContentView: View {
+    
+    let calendarAgent = CalendarAgent(
+        eventRange: .oneWeek) { result in
+        print(result)
+    } errorHandler: { error in
+        print(error)
+    }
+    
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Make\nEpic\nThings")
-                .font(Font.system(size: 34.0))
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.leading)
-                .padding(.horizontal, 16.0)
-                .padding(.vertical, 12.0)
-                .frame(width: 360.0, height: 320.0, alignment: .topLeading)
-            Button(action: {
-                NSApplication.shared.terminate(self)
-            })
-            {
-                Text("Quit App")
-                .font(.caption)
-                .fontWeight(.semibold)
+        List {
+            Section(header: Text("Events")) {
+                ForEach(calendarAgent.events!, id: \.eventIdentifier) { event in
+                    Button(
+                        action: {
+                            if let url = URL(string: "\(event.url!)") {
+                                NSWorkspace.shared.open(url)
+                            }
+                        },
+                        label: {
+                            ConfListItem(event: event, conferenceType: .facetime)
+                        }
+                    ).buttonStyle(BorderlessButtonStyle())
+                }
             }
-            .padding(.trailing, 16.0)
-            .frame(width: 360.0, alignment: .trailing)
+            
+            Divider()
+            
+            Section(header: Text("Speed Dial")) {
+                Text("Hello")
+            }
+            
+            Divider()
+            
+            Section(header: Text("General")) {
+                ForEach(0..<1) { item in
+                    Button {
+                        
+                    } label: {
+                        PreferenceListItem()
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                }
+            }
+            
+            Divider()
         }
-        .padding(0)
-        .frame(width: 360.0, height: 360.0, alignment: .top)
     }
 }
 
